@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>我的账户</title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/buttons.min.css" rel="stylesheet" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/global.css" rel="stylesheet" />
+    <link href="css/flex.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet" />
+    <link href="css/my.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="mui-content" style="padding-bottom: 1rem">
+        <img src="images/big-logo.png" class="bigLogo" />
+        <a href="P2-1_inputTel.html" class="button button-3d button-primary button-rounded button-zd blockBtn loginRegisterBtn">登录/注册</a>
+        <p class="grayTip">您还未登录，看不见您的账号</p>
+        <p class="blueTip">市场有风险，投资需谨慎</p>
+    </div>
+
+    <!--底部导航-->
+    <nav class="mui-bar mui-bar-tab bottomNav">
+        <a class="mui-tab-item" href="P3-1_financing2.html">
+            <span class="financingIcon"></span>
+            <span class="mui-tab-label">理财</span>
+        </a>
+        <a class="mui-tab-item" href="P3-2_find.html">
+            <span class="findIcon"></span>
+            <span class="mui-tab-label">发现</span>
+        </a>
+        <a class="mui-tab-item" href="P3-3_privilege.html">
+            <span class="privilegeIcon"></span>
+            <span class="mui-tab-label">特权</span>
+        </a>
+        <a class="mui-tab-item mui-active" href="P3-4_myAccount.html">
+            <span class="myIcon"></span>
+            <span class="mui-tab-label">我的</span>
+        </a>
+    </nav>
+</body>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/buttons.js"></script>
+<script>
+$(function(){
+    //切换别的模块后再切换回来，理财模块默认显示月账户
+    sessionStorage.setItem("account","month");
+
+    $(".bottomNav>a").on("tap",function(){
+        location.href= $(this).attr("href");
+    });
+});
+</script>
+</html>

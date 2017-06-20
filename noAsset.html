@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>总资产明细</title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/buttons.min.css" rel="stylesheet" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/global.css" rel="stylesheet" />
+    <link href="css/flex.css" rel="stylesheet" />
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            height: 100%;
+        }
+        .mui-content{
+            height: 100%;
+            padding: .2rem;
+            text-align: center;
+        }
+        .noAssetLogo{
+            width: 3.89rem;
+            height: 4.11rem;
+            margin-top: 1.1rem;
+            margin-bottom: .2rem;
+        }
+        .thisTip{
+            font-size: .26rem;
+            color: #666666;
+        }
+        .fixedBottom{
+            position: absolute;
+            width: 100%;
+            padding: .2rem;
+            left: 0;
+            bottom: .4rem;
+        }
+        .fixedBottom>a.button{
+            width: 100%;
+        }
+        .fixedBottom>p{
+            font-size: .18rem;
+            color: #999999;
+            margin-top: .24rem;
+        }
+    </style>
+</head>
+<body>
+<div class="mui-content">
+    <img class="noAssetLogo" src="images/noAssetLogo.png" />
+    <p class="thisTip">很遗憾的说：您暂无资产</p>
+    <div class="fixedBottom">
+        <a href="#" class="button button-3d button-primary button-rounded button-zd">确认</a>
+        <p>市场有风险，投资需谨慎</p>
+    </div>
+
+</div>
+</body>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/buttons.js"></script>
+<script>
+$(function(){
+
+});
+</script>
+</html>

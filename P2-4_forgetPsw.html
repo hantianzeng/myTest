@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>忘记密码</title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/buttons.min.css" rel="stylesheet" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/global.css" rel="stylesheet" />
+    <link href="css/flex.css" rel="stylesheet" />
+    <link href="css/login.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="mui-content">
+        <form class="mui-input-group registerForm">
+            <div class="captchaRegion" style="height: auto;box-shadow: none">
+                <p class="registerTip">我们已发送短信验证码至180****8080，请在输入框内填写验证码，若未收到请耐心等待~</p>
+                <div class="zd-input-group" style="margin: .3rem .2rem;">
+                    <i class="captcha-icon"></i>
+                    <input type="text" style="padding-left: .76rem;padding-right: 1.9rem;" class="loginInput" placeholder="请输入验证码" />
+                    <button type="button" class="mui-btn mui-btn-blue getCaptchaBtn">发送验证码</button>
+                </div>
+                <div style="padding: 0 .3rem">
+                    <a href="P2-4-1_setNewPsw.html" class="button button-3d button-primary button-rounded button-zd blockBtn">下一步</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/buttons.js"></script>
+<script>
+$(function(){
+    var wait = 60;
+    function time(btn){
+        if (wait===0) {
+            btn.removeAttribute("disabled");
+            btn.innerHTML = "获取验证码";
+            wait = 60;
+        }else{
+            btn.setAttribute("disabled",true);
+            btn.innerHTML = wait + "秒后重试";
+            wait--;
+            setTimeout(function(){
+                time(btn);
+            },1000);
+        }
+    }
+
+    $(".getCaptchaBtn").on("tap",function(){
+       time(this);
+    });
+
+    mui.trigger($(".getCaptchaBtn").get(0),"tap");
+});
+</script>
+</html>

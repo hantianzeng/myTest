@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>理财</title>
+    <link href="css/mui.min.css" rel="stylesheet" />
+    <link href="css/buttons.min.css" rel="stylesheet" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/global.css" rel="stylesheet" />
+    <link href="css/flex.css" rel="stylesheet" />
+    <link href="css/financing.css" rel="stylesheet" />
+</head>
+<body style="background: #fafafa">
+    <div class="mui-content" style="background: #ffffff;padding-top: .3rem;">
+        <ul class="accountTab" style="margin-top: 0">
+            <li class="active"><a href="#">日账户</a></li>
+            <li><a href="P3-1_financing2.html">月账户</a></li>
+            <li><a href="P3-1_financing3.html">季账户</a></li>
+        </ul>
+
+        <div class="redBall">
+            <a class="activity" href="P3-1-1_promotionActivity.html"></a>
+            <h2><em>9.5</em>%</h2>
+            <a href="P3-1-2_day-details.html">查看详情》</a>
+        </div>
+        <div class="ad">
+            <div>抽奖加息  +0.5%</div>
+            <div>邀请加息  +0.3%</div>
+            <p>随时取现，每天不限</p>
+        </div>
+
+        <div class="financingFooter">
+            <a href="P3-4-5_moneyOut.html" class="button button-3d button-rounded">转出</a>
+            <a href="P3-1-5_moneyInto.html" class="button button-3d button-primary button-rounded button-zd">转入</a>
+
+            <ul>
+                <li><a href="P5-1_about.html">关于赚动</a></li>
+                <li><a href="P5-2_security.html">安全保障</a></li>
+                <li><a href="P5-3_FAQ.html">常见问题</a></li>
+            </ul>
+            <p>市场有风险，投资需谨慎</p>
+        </div>
+    </div>
+
+    <!--底部导航-->
+    <nav class="mui-bar mui-bar-tab bottomNav">
+        <a class="mui-tab-item mui-active" href="P3-1_financing2.html">
+            <span class="financingIcon"></span>
+            <span class="mui-tab-label">理财</span>
+        </a>
+        <a class="mui-tab-item" href="P3-2_find.html">
+            <span class="findIcon"></span>
+            <span class="mui-tab-label">发现</span>
+        </a>
+        <a class="mui-tab-item" href="P3-3_privilege.html">
+            <span class="privilegeIcon"></span>
+            <span class="mui-tab-label">特权</span>
+        </a>
+        <a class="mui-tab-item" href="P3-4_myAccount.html">
+            <span class="myIcon"></span>
+            <span class="mui-tab-label">我的</span>
+        </a>
+    </nav>
+</body>
+<script src="js/mui.min.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/buttons.js"></script>
+<script>
+$(function(){
+    $(".bottomNav>a").on("tap",function(){
+        location.href= $(this).attr("href");
+    });
+
+    $(".accountTab>li>a").on("tap",function(){
+        $(this).parent().siblings().removeClass("active");
+        $(this).parent().addClass("active");
+    });
+});
+</script>
+</html>
